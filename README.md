@@ -11,6 +11,8 @@ Dockerfile for [Apache Kafka](http://kafka.apache.org/)
 
 The image is available directly from [Docker Hub](https://hub.docker.com/r/wurstmeister/kafka/)
 
+Doc: https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-docker.html
+
 Tags and releases
 -----------------
 
