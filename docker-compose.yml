@@ -37,7 +37,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       
-  kafka1: 
+  kafka2: 
     image: wurstmeister/kafka 
     container_name: docker_kafka_3
     ports:
