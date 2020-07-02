@@ -18,6 +18,7 @@ services:
        KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
        KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+       KAFKA_BROKER_ID: 1001
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
@@ -34,6 +35,7 @@ services:
         KAFKA_LISTENERS: INSIDE://0.0.0.0:9094,OUTSIDE://0.0.0.0:9093
         KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+        KAFKA_BROKER_ID: 1002
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       
@@ -49,6 +51,7 @@ services:
         KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
         KAFKA_LISTENERS: INSIDE://0.0.0.0:9095,OUTSIDE://0.0.0.0:9094
         KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+        KAFKA_BROKER_ID: 1003
         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
