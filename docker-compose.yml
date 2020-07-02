@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   zookeeper:
     image: wurstmeister/zookeeper
@@ -7,7 +7,7 @@ services:
     networks: 
       - kafka
   kafka:
-    image: wurstmeister/kafka
+    buil: .
     ports:
       - "9092"
     environment:
