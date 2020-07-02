@@ -7,7 +7,7 @@ services:
     networks: 
       - kafka
   kafka:
-    buil: .
+    build: .
     ports:
       - "9092"
     environment:
