@@ -7,7 +7,7 @@ services:
     networks: 
       - kafka
   kafka:
-    build: .
+    image: wurstmeister/kafka
     ports:
       - "9092"
     environment:
