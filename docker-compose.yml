@@ -7,6 +7,7 @@ services:
    
   kafka:
     image: wurstmeister/kafka
+    container_name: kafka_node_1
     ports:
       - "9092:9092"
     expose:
@@ -14,6 +15,7 @@ services:
     environment:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_DELETE_TOPIC_ENABLE: "true" 
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'false'
       KAFKA_LISTENERS: "INSIDE://0.0.0.0:9090,OUTSIDE://0.0.0.0:9092"
       KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka:9090,OUTSIDE://23.101.30.117:9092"
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "INSIDE:PLAINTEXT, OUTSIDE:PLAINTEXT"
@@ -23,6 +25,7 @@ services:
 
   kafka1:
     image: wurstmeister/kafka
+    container_name: kafka_node_3
     ports:
       - "9093:9092"
     expose:
@@ -30,6 +33,7 @@ services:
     environment:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_DELETE_TOPIC_ENABLE: "true" 
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'false'
       KAFKA_LISTENERS: "INSIDE://0.0.0.0:9090,OUTSIDE://0.0.0.0:9092"
       KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka1:9090,OUTSIDE://23.101.30.117:9093"
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "INSIDE:PLAINTEXT, OUTSIDE:PLAINTEXT"
@@ -39,6 +43,7 @@ services:
 
   kafka2:
     image: wurstmeister/kafka
+    container_name: kafka_node_3
     ports:
       - "9094:9092"
     expose:
@@ -46,6 +51,7 @@ services:
     environment:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_DELETE_TOPIC_ENABLE: "true" 
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'false'
       KAFKA_LISTENERS: "INSIDE://0.0.0.0:9090,OUTSIDE://0.0.0.0:9092"
       KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka2:9090,OUTSIDE://23.101.30.117:9094"
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "INSIDE:PLAINTEXT, OUTSIDE:PLAINTEXT"
