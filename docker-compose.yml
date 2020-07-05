@@ -25,7 +25,7 @@ services:
 
   kafka1:
     image: wurstmeister/kafka
-    container_name: kafka_node_3
+    container_name: kafka_node_2
     ports:
       - "9093:9092"
     expose:
